@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Bouquet Gallery | Ribbon Bouquet by Muskan</title>  <meta name="description" content="Explore 50 bouquet design ideas for birthdays, anniversaries, weddings and special occasions.">  <link rel="stylesheet" href="style.css">  <style>
+    .gallery-intro {
+      text-align: center;
+      padding: 45px 20px;
+      background: linear-gradient(135deg, #fff0f5, #ffe1ec);
+    }
+
+    .gallery-intro h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      color: #b83267;
+      margin-bottom: 10px;
+    }
+
+    .gallery-intro p {
+      margin: 8px 0;
+    }
+
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 25px 15px 0;
+    }
+
+    .filter-btn {
+      border: 1px solid #e85d8e;
+      background: white;
+      color: #b83267;
+      border-radius: 25px;
+      padding: 9px 16px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #e85d8e;
+      color: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      padding: 30px 6%;
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid #f1d4df;
+      background: #fffafd;
+      box-shadow: 0 5px 18px #0000000b;
+      transition: transform .2s;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      display: block;
+      background: #ffe8f0;
+    }
+
+    .gallery-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .gallery-info h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+      color: #b83267;
+    }
+
+    .gallery-info p {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .gallery-info .btn {
+      padding: 8px 15px;
+      font-size: 13px;
+    }
+
+    .gallery-note {
+      max-width: 750px;
+      margin: 0 auto 25px;
+      padding: 0 20px;
+      text-align: center;
+      color: #725663;
+    }
+
+    .hidden-card {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 25px 4%;
+        gap: 14px;
+      }
+
+      .gallery-card img {
+        height: 210px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 20px 12px;
+      }
+
+      .gallery-card img {
+        height: 175px;
+      }
+
+      .gallery-info {
+        padding: 10px 6px;
+      }
+
+      .gallery-info h3 {
+        font-size: 14px;
+      }
+
+      .gallery-info p {
+        font-size: 12px;
+      }
+
+      .gallery-info .btn {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+    }
+  </style></head><body><header class="header">
+  <a class="logo" href="index.html">🎀 Ribbon Bouquet</a>  <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+    ☰
+  </button>  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="collection.html">Collection & Prices</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About & Contact</a>
+  </nav>
+</header><main>  <section class="gallery-intro">
+    <p class="eyebrow">OUR BOUQUET COLLECTION</p>
+    <h1>50 Beautiful Bouquet Ideas 🌹</h1>
+    <p>Small Details, Big Emotions</p>
+    <p>Find a special gift for someone special.</p>
+  </section>  <div class="gallery-filters">
+    <button class="filter-btn active" onclick="filterGallery('all', this)">All Designs</button>
+    <button class="filter-btn" onclick="filterGallery('romantic', this)">Love & Romantic</button>
+    <button class="filter-btn" onclick="filterGallery('classic', this)">Classic Roses</button>
+    <button class="filter-btn" onclick="filterGallery('special', this)">Special Occasions</button>
+    <button class="filter-btn" onclick="filterGallery('luxury', this)">Luxury</button>
+  </div>  <section class="gallery-grid" id="galleryGrid" aria-label="Bouquet photo gallery">
+  </section>  <p class="gallery-note">
+    These are online demo inspiration photos, not guaranteed photos of our handmade products.
+    Actual ribbon colours, designs and availability may vary. Contact us before ordering.
+  </p>  <section class="section">
+    <h2>Found Your Favourite? 💗</h2>
+    <p>Contact us to discuss your preferred bouquet design.</p><div class="contact-buttons">
+  <a class="btn"
+     href="https://wa.me/919864152219?text=Hello%20Ribbon%20Bouquet%20by%20Muskan!%20I%20want%20to%20order%20a%20bouquet."
+     target="_blank" rel="noopener">
+    Order on WhatsApp
+  </a>
+
+  <a class="btn btn-light"
+     href="https://www.instagram.com/b_o_u_q_u_e_t_0/"
+     target="_blank" rel="noopener">
+    Instagram
+  </a>
+</div>
+
+  </section></main><footer>
+  <p>🎀 Ribbon Bouquet by Muskan</p>
+  <p>Small Details, Big Emotions</p>
+  <a href="https://www.instagram.com/b_o_u_q_u_e_t_0/"
+     target="_blank" rel="noopener">@b_o_u_q_u_e_t_0</a>
+</footer><script src="script.js"></script><script>
+  const bouquets = [
+    ["Single Red Rose", "classic", 80, "red rose flower bouquet"],
+    ["Pink Love Bouquet", "romantic", 150, "pink rose bouquet"],
+    ["Romantic Red Roses", "romantic", 200, "red roses romantic bouquet"],
+    ["Pink Dream Bouquet", "romantic", 220, "pink flower bouquet"],
+    ["Purple Rose Bouquet", "classic", 250, "purple rose flower bouquet"],
+    ["Elegant White Roses", "classic", 280, "white rose bouquet"],
+    ["Red Heart Bouquet", "romantic", 300, "red heart shaped flower bouquet"],
+    ["Birthday Special", "special", 300, "birthday flower bouquet"],
+    ["Anniversary Bouquet", "romantic", 350, "anniversary rose bouquet"],
+    ["Luxury Pink Roses", "luxury", 500, "luxury pink rose bouquet"],
+
+    ["Yellow Rose Bouquet", "classic", 220, "yellow rose bouquet"],
+    ["Orange Rose Bouquet", "classic", 250, "orange rose bouquet"],
+    ["Rainbow Rose Bouquet", "special", 350, "rainbow rose bouquet"],
+    ["Red and White Roses", "classic", 300, "red white rose bouquet"],
+    ["Pink and White Roses", "classic", 300, "pink white flower bouquet"],
+    ["Purple and Pink Roses", "romantic", 350, "purple pink rose bouquet"],
+    ["Proposal Bouquet", "romantic", 400, "romantic proposal rose bouquet"],
+    ["Valentine Gift Bouquet", "romantic", 450, "valentines day rose bouquet"],
+    ["Cute Mini Bouquet", "classic", 150, "small flower bouquet"],
+    ["Grand Rose Bouquet", "luxury", 650, "grand luxury rose bouquet"],
+
+    ["Birthday Pink Flowers", "special", 280, "pink birthday flower bouquet"],
+    ["Wedding White Bouquet", "special", 500, "white wedding flower bouquet"],
+    ["Bridal Rose Bouquet", "luxury", 650, "bridal rose flower bouquet"],
+    ["Engagement Bouquet", "special", 500, "engagement flower bouquet"],
+    ["Friendship Bouquet", "special", 250, "colourful friendship flower bouquet"],
+    ["Thank You Bouquet", "special", 220, "thank you flower bouquet"],
+    ["Mother's Day Bouquet", "special", 350, "pink flower gift bouquet"],
+    ["Graduation Bouquet", "special", 300, "graduation flower bouquet"],
+    ["Congratulations Bouquet", "special", 350, "congratulations flower bouquet"],
+    ["Surprise Gift Bouquet", "special", 400, "surprise gift flower bouquet"],
+
+    ["Dark Red Rose Bouquet", "romantic", 400, "dark red rose bouquet"],
+    ["Pastel Pink Bouquet", "luxury", 450, "pastel pink flower bouquet"],
+    ["Cream Rose Bouquet", "classic", 350, "cream white rose bouquet"],
+    ["Blue Rose Style", "special", 400, "blue rose flower bouquet"],
+    ["Lavender Rose Bouquet", "classic", 350, "lavender rose bouquet"],
+    ["Peach Rose Bouquet", "classic", 350, "peach rose bouquet"],
+    ["Elegant Black Wrap", "luxury", 500, "black wrapping rose bouquet"],
+    ["Golden Wrap Bouquet", "luxury", 550, "gold wrapping flower bouquet"],
+    ["Premium Gift Bouquet", "luxury", 600, "premium luxury flower bouquet"],
+    ["Extra Large Bouquet", "luxury", 850, "large luxury flower bouquet"],
+
+    ["Three Rose Gift", "classic", 200, "three red rose bouquet"],
+    ["Six Rose Gift", "classic", 280, "six rose bouquet"],
+    ["Seven Rose Bouquet", "classic", 300, "seven rose flower bouquet"],
+    ["Fifteen Rose Bouquet", "luxury", 500, "fifteen red rose bouquet"],
+    ["Twenty Rose Bouquet", "luxury", 650, "twenty rose bouquet"],
+    ["Mini Romantic Gift", "romantic", 250, "mini romantic pink rose bouquet"],
+    ["Heart Gift Arrangement", "romantic", 500, "heart shaped rose flower arrangement"],
+    ["Colourful Mixed Bouquet", "special", 400, "mixed colourful flower bouquet"],
+    ["Premium Anniversary Gift", "luxury", 700, "premium anniversary rose bouquet"],
+    ["Signature Muskan Bouquet", "luxury", 750, "luxury pink red rose bouquet"]
+  ];
+
+  const grid = document.getElementById("galleryGrid");
+
+  bouquets.forEach((bouquet, index) => {
+    const [name, category, price, searchTerm] = bouquet;
+
+    const card = document.createElement("article");
+    card.className = "gallery-card";
+    card.dataset.category = category;
+
+    const image = document.createElement("img");
+    image.src =
+      "https://loremflickr.com/600/700/" +
+      encodeURIComponent(searchTerm) +
+      "?lock=" + (index + 1);
+
+    image.alt = name + " inspiration photo";
+    image.loading = index < 4 ? "eager" : "lazy";
+
+    image.onerror = function () {
+      this.onerror = null;
+      this.src = "https://placehold.co/600x700/fff0f5/b83267?text=Bouquet+" + (index + 1);
+    };
+
+    const info = document.createElement("div");
+    info.className = "gallery-info";
+
+    const title = document.createElement("h3");
+    title.textContent = name;
+
+    const priceText = document.createElement("p");
+    priceText.textContent = "Starting idea: ₹" + price;
+
+    const order = document.createElement("a");
+    order.className = "btn";
+    order.textContent = "Ask on WhatsApp";
+
+    const message =
+      "Hello Ribbon Bouquet by Muskan! 🎀 I liked the " +
+      name + " design. Is a similar ribbon bouquet available? Please confirm the price and delivery.";
+
+    order.href = "https://wa.me/919864152219?text=" + encodeURIComponent(message);
+    order.target = "_blank";
+    order.rel = "noopener";
+
+    info.appendChild(title);
+    info.appendChild(priceText);
+    info.appendChild(order);
+
+    card.appendChild(image);
+    card.appendChild(info);
+
+    grid.appendChild(card);
+  });
+
+  function filterGallery(category, button) {
+    document.querySelectorAll(".filter-btn").forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    document.querySelectorAll(".gallery-card").forEach(function (card) {
+      const show = category === "all" || card.dataset.category === category;
+      card.classList.toggle("hidden-card", !show);
+    });
+  }
+</script></body>
+</html>
