@@ -1,316 +1,436 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Bouquet Gallery | Ribbon Bouquet by Muskan</title>  <meta name="description" content="Explore 50 bouquet design ideas for birthdays, anniversaries, weddings and special occasions.">  <link rel="stylesheet" href="style.css">  <style>
-    .gallery-intro {
-      text-align: center;
-      padding: 45px 20px;
-      background: linear-gradient(135deg, #fff0f5, #ffe1ec);
-    }
-
-    .gallery-intro h1 {
-      font-size: clamp(30px, 5vw, 46px);
-      color: #b83267;
-      margin-bottom: 10px;
-    }
-
-    .gallery-intro p {
-      margin: 8px 0;
-    }
-
-    .gallery-filters {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 25px 15px 0;
-    }
-
-    .filter-btn {
-      border: 1px solid #e85d8e;
-      background: white;
-      color: #b83267;
-      border-radius: 25px;
-      padding: 9px 16px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: #e85d8e;
-      color: white;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 20px;
-      padding: 30px 6%;
-    }
-
-    .gallery-card {
-      overflow: hidden;
-      border-radius: 16px;
-      border: 1px solid #f1d4df;
-      background: #fffafd;
-      box-shadow: 0 5px 18px #0000000b;
-      transition: transform .2s;
-    }
-
-    .gallery-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 245px;
-      object-fit: cover;
-      display: block;
-      background: #ffe8f0;
-    }
-
-    .gallery-info {
-      padding: 15px;
-      text-align: center;
-    }
-
-    .gallery-info h3 {
-      font-size: 17px;
-      margin-bottom: 5px;
-      color: #b83267;
-    }
-
-    .gallery-info p {
-      font-size: 14px;
-      margin-bottom: 12px;
-    }
-
-    .gallery-info .btn {
-      padding: 8px 15px;
-      font-size: 13px;
-    }
-
-    .gallery-note {
-      max-width: 750px;
-      margin: 0 auto 25px;
-      padding: 0 20px;
-      text-align: center;
-      color: #725663;
-    }
-
-    .hidden-card {
-      display: none;
-    }
-
-    @media (max-width: 900px) {
-      .gallery-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        padding: 25px 4%;
-        gap: 14px;
-      }
-
-      .gallery-card img {
-        height: 210px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        padding: 20px 12px;
-      }
-
-      .gallery-card img {
-        height: 175px;
-      }
-
-      .gallery-info {
-        padding: 10px 6px;
-      }
-
-      .gallery-info h3 {
-        font-size: 14px;
-      }
-
-      .gallery-info p {
-        font-size: 12px;
-      }
-
-      .gallery-info .btn {
-        padding: 8px 10px;
-        font-size: 12px;
-      }
-    }
-  </style></head><body><header class="header">
-  <a class="logo" href="index.html">🎀 Ribbon Bouquet</a>  <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-    ☰
-  </button>  <nav id="nav">
-    <a href="index.html">Home</a>
-    <a href="collection.html">Collection & Prices</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About & Contact</a>
-  </nav>
-</header><main>  <section class="gallery-intro">
-    <p class="eyebrow">OUR BOUQUET COLLECTION</p>
-    <h1>50 Beautiful Bouquet Ideas 🌹</h1>
-    <p>Small Details, Big Emotions</p>
-    <p>Find a special gift for someone special.</p>
-  </section>  <div class="gallery-filters">
-    <button class="filter-btn active" onclick="filterGallery('all', this)">All Designs</button>
-    <button class="filter-btn" onclick="filterGallery('romantic', this)">Love & Romantic</button>
-    <button class="filter-btn" onclick="filterGallery('classic', this)">Classic Roses</button>
-    <button class="filter-btn" onclick="filterGallery('special', this)">Special Occasions</button>
-    <button class="filter-btn" onclick="filterGallery('luxury', this)">Luxury</button>
-  </div>  <section class="gallery-grid" id="galleryGrid" aria-label="Bouquet photo gallery">
-  </section>  <p class="gallery-note">
-    These are online demo inspiration photos, not guaranteed photos of our handmade products.
-    Actual ribbon colours, designs and availability may vary. Contact us before ordering.
-  </p>  <section class="section">
-    <h2>Found Your Favourite? 💗</h2>
-    <p>Contact us to discuss your preferred bouquet design.</p><div class="contact-buttons">
-  <a class="btn"
-     href="https://wa.me/919864152219?text=Hello%20Ribbon%20Bouquet%20by%20Muskan!%20I%20want%20to%20order%20a%20bouquet."
-     target="_blank" rel="noopener">
-    Order on WhatsApp
-  </a>
-
-  <a class="btn btn-light"
-     href="https://www.instagram.com/b_o_u_q_u_e_t_0/"
-     target="_blank" rel="noopener">
-    Instagram
-  </a>
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Gallery | Ribbon Bouquet by Muskan</title>    <!-- Existing Stylesheet -->    <link rel="stylesheet" href="style.css">    <!-- Gallery & Mobile Responsive Custom Styles -->    <style>  
+    :root {  
+      --soft-pink: #FFF0F3;  
+      --rose-pink: #E88D9B;  
+      --deep-rose: #C25972;  
+      --gold-accent: #D4AF37;  
+      --card-bg: #FFFFFF;  
+      --text-main: #333333;  
+      --text-muted: #666666;  
+      --shadow: 0 8px 24px rgba(232, 141, 155, 0.15);  
+    }  
+  
+    body {  
+      background-color: var(--soft-pink);  
+      color: var(--text-main);  
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+      margin: 0;  
+      padding: 0;  
+    }  
+  
+    /* Header & Tagline */  
+    .gallery-header {  
+      text-align: center;  
+      padding: 40px 20px 20px;  
+    }  
+  
+    .gallery-header h1 {  
+      font-size: 2.4rem;  
+      color: var(--deep-rose);  
+      margin-bottom: 5px;  
+      font-weight: 700;  
+    }  
+  
+    .gallery-header p.tagline {  
+      font-size: 1.1rem;  
+      color: var(--gold-accent);  
+      font-style: italic;  
+      letter-spacing: 1px;  
+      margin-top: 0;  
+      margin-bottom: 20px;  
+    }  
+  
+    .delivery-badge {  
+      display: inline-block;  
+      background-color: #FFFFFF;  
+      border: 1px solid var(--rose-pink);  
+      color: var(--deep-rose);  
+      padding: 8px 18px;  
+      border-radius: 20px;  
+      font-size: 0.9rem;  
+      font-weight: 600;  
+      box-shadow: var(--shadow);  
+    }  
+  
+    /* Top Action Buttons */  
+    .action-bar {  
+      display: flex;  
+      justify-content: center;  
+      gap: 12px;  
+      flex-wrap: wrap;  
+      margin: 25px auto;  
+      padding: 0 15px;  
+    }  
+  
+    .btn-action {  
+      display: inline-flex;  
+      align-items: center;  
+      gap: 8px;  
+      padding: 10px 20px;  
+      border-radius: 25px;  
+      text-decoration: none;  
+      font-weight: 600;  
+      font-size: 0.9rem;  
+      transition: all 0.3s ease;  
+      box-shadow: var(--shadow);  
+    }  
+  
+    .btn-collection {  
+      background-color: var(--rose-pink);  
+      color: #ffffff;  
+    }  
+  
+    .btn-instagram {  
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);  
+      color: #ffffff;  
+    }  
+  
+    .btn-whatsapp-main {  
+      background-color: #25D366;  
+      color: #ffffff;  
+    }  
+  
+    .btn-action:hover {  
+      transform: translateY(-2px);  
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);  
+      opacity: 0.95;  
+    }  
+  
+    /* Responsive Grid Layout */  
+    .gallery-container {  
+      max-width: 1300px;  
+      margin: 0 auto;  
+      padding: 20px 15px 60px;  
+    }  
+  
+    .gallery-grid {  
+      display: grid;  
+      grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */  
+      gap: 24px;  
+    }  
+  
+    @media (max-width: 1024px) {  
+      .gallery-grid {  
+        grid-template-columns: repeat(3, 1fr); /* Tablet: 3 columns */  
+      }  
+    }  
+  
+    @media (max-width: 768px) {  
+      .gallery-grid {  
+        grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columns */  
+        gap: 15px;  
+      }  
+        
+      .gallery-header h1 {  
+        font-size: 1.8rem;  
+      }  
+    }  
+  
+    /* Bouquet Card */  
+    .bouquet-card {  
+      background: var(--card-bg);  
+      border-radius: 16px;  
+      overflow: hidden;  
+      box-shadow: var(--shadow);  
+      display: flex;  
+      flex-direction: column;  
+      justify-content: space-between;  
+      transition: transform 0.3s ease, box-shadow 0.3s ease;  
+      border: 1px solid rgba(232, 141, 155, 0.2);  
+    }  
+  
+    .bouquet-card:hover {  
+      transform: translateY(-6px);  
+      box-shadow: 0 12px 28px rgba(194, 89, 114, 0.25);  
+    }  
+  
+    .card-image-wrapper {  
+      position: relative;  
+      width: 100%;  
+      aspect-ratio: 4 / 5;  
+      background-color: #F8F8F8;  
+      overflow: hidden;  
+    }  
+  
+    .card-image-wrapper img {  
+      width: 100%;  
+      height: 100%;  
+      object-fit: cover;  
+      display: block;  
+      transition: transform 0.5s ease;  
+    }  
+  
+    .bouquet-card:hover .card-image-wrapper img {  
+      transform: scale(1.05);  
+    }  
+  
+    .card-body {  
+      padding: 16px;  
+      display: flex;  
+      flex-direction: column;  
+      flex-grow: 1;  
+    }  
+  
+    .card-title {  
+      font-size: 1.05rem;  
+      font-weight: 700;  
+      color: var(--deep-rose);  
+      margin: 0 0 8px 0;  
+    }  
+  
+    .card-description {  
+      font-size: 0.85rem;  
+      color: var(--text-muted);  
+      line-height: 1.4;  
+      margin: 0 0 14px 0;  
+      flex-grow: 1;  
+    }  
+  
+    .card-footer {  
+      display: flex;  
+      flex-direction: column;  
+      gap: 10px;  
+      margin-top: auto;  
+    }  
+  
+    .price-tag {  
+      font-size: 0.85rem;  
+      font-weight: 700;  
+      color: var(--gold-accent);  
+      text-transform: uppercase;  
+      letter-spacing: 0.5px;  
+    }  
+  
+    .btn-whatsapp-card {  
+      background-color: #25D366;  
+      color: #FFFFFF;  
+      text-decoration: none;  
+      text-align: center;  
+      padding: 10px 12px;  
+      border-radius: 10px;  
+      font-weight: 600;  
+      font-size: 0.85rem;  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+      gap: 6px;  
+      transition: background-color 0.2s ease;  
+      cursor: pointer;  
+      border: none;  
+      width: 100%;  
+      box-sizing: border-box;  
+    }  
+  
+    .btn-whatsapp-card:hover {  
+      background-color: #1EBE5D;  
+    }  
+  </style>  </head>  
+<body>    <!-- Navigation Bar Header -->    <header class="navbar">  
+    <div class="nav-container">  
+      <a href="index.html" class="brand-logo">Ribbon Bouquet by Muskan</a>  
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">  
+        &#9776;  
+      </button>  
+      <nav class="nav-links" id="navLinks">  
+        <a href="index.html">Home</a>  
+        <a href="collection.html">Collection & Prices</a>  
+        <a href="gallery.html" class="active">Gallery</a>  
+        <a href="about.html">About & Contact</a>  
+      </nav>  
+    </div>  
+  </header>    <!-- Gallery Header Section -->    <section class="gallery-header">  
+    <h1>Our Bouquet Gallery</h1>  
+    <p class="tagline">Small Details, Big Emotions</p>  
+    <div class="delivery-badge">  
+      🚚 Orders across Assam (Subject to availability)  
+    </div>  <!-- Action Buttons -->  
+<div class="action-bar">  
+  <a href="collection.html" class="btn-action btn-collection">  
+    ‹ Back to Collection  
+  </a>  
+  <a href="https://www.instagram.com/b_o_u_q_u_e_t_0/" target="_blank" rel="noopener" class="btn-action btn-instagram">  
+    Instagram (@b_o_u_q_u_e_t_0)  
+  </a>  
+  <a href="https://wa.me/919864152219" target="_blank" rel="noopener" class="btn-action btn-whatsapp-main">  
+    WhatsApp Contact  
+  </a>  
 </div>
 
-  </section></main><footer>
-  <p>🎀 Ribbon Bouquet by Muskan</p>
-  <p>Small Details, Big Emotions</p>
-  <a href="https://www.instagram.com/b_o_u_q_u_e_t_0/"
-     target="_blank" rel="noopener">@b_o_u_q_u_e_t_0</a>
-</footer><script src="script.js"></script><script>
-  const bouquets = [
-    ["Single Red Rose", "classic", 80, "red rose flower bouquet"],
-    ["Pink Love Bouquet", "romantic", 150, "pink rose bouquet"],
-    ["Romantic Red Roses", "romantic", 200, "red roses romantic bouquet"],
-    ["Pink Dream Bouquet", "romantic", 220, "pink flower bouquet"],
-    ["Purple Rose Bouquet", "classic", 250, "purple rose flower bouquet"],
-    ["Elegant White Roses", "classic", 280, "white rose bouquet"],
-    ["Red Heart Bouquet", "romantic", 300, "red heart shaped flower bouquet"],
-    ["Birthday Special", "special", 300, "birthday flower bouquet"],
-    ["Anniversary Bouquet", "romantic", 350, "anniversary rose bouquet"],
-    ["Luxury Pink Roses", "luxury", 500, "luxury pink rose bouquet"],
+  </section>    <!-- Main Gallery Grid -->    <main class="gallery-container">  
+    <div class="gallery-grid">  <!-- Card 1 -->  
+  <article class="bouquet-card">  
+    <div class="card-image-wrapper">  
+      <img src="images/bouquet-01.jpg"   
+           alt="Royal Burgundy Bloom Box"   
+           loading="lazy"   
+           onerror="this.style.display='none';">  
+    </div>  
+    <div class="card-body">  
+      <h2 class="card-title">Royal Burgundy Bloom Box</h2>  
+      <p class="card-description">Deep burgundy satin roses elegantly arranged in a matching round gift box with a silver butterfly motif.</p>  
+      <div class="card-footer">  
+        <span class="price-tag">Price on Request</span>  
+        <button class="btn-whatsapp-card" onclick="orderOnWhatsApp('Royal Burgundy Bloom Box')">  
+          💬 Order on WhatsApp  
+        </button>  
+      </div>  
+    </div>  
+  </article>  
 
-    ["Yellow Rose Bouquet", "classic", 220, "yellow rose bouquet"],
-    ["Orange Rose Bouquet", "classic", 250, "orange rose bouquet"],
-    ["Rainbow Rose Bouquet", "special", 350, "rainbow rose bouquet"],
-    ["Red and White Roses", "classic", 300, "red white rose bouquet"],
-    ["Pink and White Roses", "classic", 300, "pink white flower bouquet"],
-    ["Purple and Pink Roses", "romantic", 350, "purple pink rose bouquet"],
-    ["Proposal Bouquet", "romantic", 400, "romantic proposal rose bouquet"],
-    ["Valentine Gift Bouquet", "romantic", 450, "valentines day rose bouquet"],
-    ["Cute Mini Bouquet", "classic", 150, "small flower bouquet"],
-    ["Grand Rose Bouquet", "luxury", 650, "grand luxury rose bouquet"],
+  <!-- Card 2 -->  
+  <article class="bouquet-card">  
+    <div class="card-image-wrapper">  
+      <img src="images/bouquet-02.jpg"   
+           alt="Princess Pink Crown Box"   
+           loading="lazy"   
+           onerror="this.style.display='none';">  
+    </div>  
+    <div class="card-body">  
+      <h2 class="card-title">Princess Pink Crown Box</h2>  
+      <p class="card-description">Luminous soft pink satin roses presented in a pearl-trimmed box topped with a golden crown for royalty.</p>  
+      <div class="card-footer">  
+        <span class="price-tag">Price on Request</span>  
+        <button class="btn-whatsapp-card" onclick="orderOnWhatsApp('Princess Pink Crown Box')">  
+          💬 Order on WhatsApp  
+        </button>  
+      </div>  
+    </div>  
+  </article>  
 
-    ["Birthday Pink Flowers", "special", 280, "pink birthday flower bouquet"],
-    ["Wedding White Bouquet", "special", 500, "white wedding flower bouquet"],
-    ["Bridal Rose Bouquet", "luxury", 650, "bridal rose flower bouquet"],
-    ["Engagement Bouquet", "special", 500, "engagement flower bouquet"],
-    ["Friendship Bouquet", "special", 250, "colourful friendship flower bouquet"],
-    ["Thank You Bouquet", "special", 220, "thank you flower bouquet"],
-    ["Mother's Day Bouquet", "special", 350, "pink flower gift bouquet"],
-    ["Graduation Bouquet", "special", 300, "graduation flower bouquet"],
-    ["Congratulations Bouquet", "special", 350, "congratulations flower bouquet"],
-    ["Surprise Gift Bouquet", "special", 400, "surprise gift flower bouquet"],
+  <!-- Card 3 -->  
+  <article class="bouquet-card">  
+    <div class="card-image-wrapper">  
+      <img src="images/bouquet-03.jpg"   
+           alt="Sweet Harmony Basket"   
+           loading="lazy"   
+           onerror="this.style.display='none';">  
+    </div>  
+    <div class="card-body">  
+      <h2 class="card-title">Sweet Harmony Basket</h2>  
+      <p class="card-description">A woven wooden basket overflowing with vibrant magenta, soft pink, and ivory handcrafted ribbon roses.</p>  
+      <div class="card-footer">  
+        <span class="price-tag">Price on Request</span>  
+        <button class="btn-whatsapp-card" onclick="orderOnWhatsApp('Sweet Harmony Basket')">  
+          💬 Order on WhatsApp  
+        </button>  
+      </div>  
+    </div>  
+  </article>  
 
-    ["Dark Red Rose Bouquet", "romantic", 400, "dark red rose bouquet"],
-    ["Pastel Pink Bouquet", "luxury", 450, "pastel pink flower bouquet"],
-    ["Cream Rose Bouquet", "classic", 350, "cream white rose bouquet"],
-    ["Blue Rose Style", "special", 400, "blue rose flower bouquet"],
-    ["Lavender Rose Bouquet", "classic", 350, "lavender rose bouquet"],
-    ["Peach Rose Bouquet", "classic", 350, "peach rose bouquet"],
-    ["Elegant Black Wrap", "luxury", 500, "black wrapping rose bouquet"],
-    ["Golden Wrap Bouquet", "luxury", 550, "gold wrapping flower bouquet"],
-    ["Premium Gift Bouquet", "luxury", 600, "premium luxury flower bouquet"],
-    ["Extra Large Bouquet", "luxury", 850, "large luxury flower bouquet"],
+  <!-- Card 4 -->  
+  <article class="bouquet-card">  
+    <div class="card-image-wrapper">  
+      <img src="images/bouquet-04.jpg"   
+           alt="Golden Butterfly Garden Basket"   
+           loading="lazy"   
+           onerror="this.style.display='none';">  
+    </div>  
+    <div class="card-body">  
+      <h2 class="card-title">Golden Butterfly Garden Basket</h2>  
+      <p class="card-description">A tall-handled floral basket adorned with golden butterflies and multi-tonal cream and pink satin blooms.</p>  
+      <div class="card-footer">  
+        <span class="price-tag">Price on Request</span>  
+        <button class="btn-whatsapp-card" onclick="orderOnWhatsApp('Golden Butterfly Garden Basket')">  
+          💬 Order on WhatsApp  
+        </button>  
+      </div>  
+    </div>  
+  </article>  
 
-    ["Three Rose Gift", "classic", 200, "three red rose bouquet"],
-    ["Six Rose Gift", "classic", 280, "six rose bouquet"],
-    ["Seven Rose Bouquet", "classic", 300, "seven rose flower bouquet"],
-    ["Fifteen Rose Bouquet", "luxury", 500, "fifteen red rose bouquet"],
-    ["Twenty Rose Bouquet", "luxury", 650, "twenty rose bouquet"],
-    ["Mini Romantic Gift", "romantic", 250, "mini romantic pink rose bouquet"],
-    ["Heart Gift Arrangement", "romantic", 500, "heart shaped rose flower arrangement"],
-    ["Colourful Mixed Bouquet", "special", 400, "mixed colourful flower bouquet"],
-    ["Premium Anniversary Gift", "luxury", 700, "premium anniversary rose bouquet"],
-    ["Signature Muskan Bouquet", "luxury", 750, "luxury pink red rose bouquet"]
-  ];
+  <!-- Card 5 -->  
+  <article class="bouquet-card">  
+    <div class="card-image-wrapper">  
+      <img src="images/bouquet-05.jpg"   
+           alt="Monochrome Velvet Single Rose"   
+           loading="lazy"   
+           onerror="this.style.display='none';">  
+    </div>  
+    <div class="card-body">  
+      <h2 class="card-title">Monochrome Velvet Single Rose</h2>  
+      <p class="card-description">A single statement crimson ribbon rose meticulously wrapped in luxury black & white pattern design paper.</p>  
+      <div class="card-footer">  
+        <span class="price-tag">Price on Request</span>  
+        <button class="btn-whatsapp-card" onclick="orderOnWhatsApp('Monochrome Velvet Single Rose')">  
+          💬 Order on WhatsApp  
+        </button>  
+      </div>  
+    </div>  
+  </article>  
 
-  const grid = document.getElementById("galleryGrid");
+  <!-- Card 6 -->  
+  <article class="bouquet-card">  
+    <div class="card-image-wrapper">  
+      <img src="images/bouquet-06.jpg"   
+           alt="Blush & Black Eternal Rose Box"   
+           loading="lazy"   
+           onerror="this.style.display='none';">  
+    </div>  
+    <div class="card-body">  
+      <h2 class="card-title">Blush & Black Eternal Rose Box</h2>  
+      <p class="card-description">Delicate baby pink satin roses nestled in chic black wrapping with a pearl handle and 'Eternal Love' ribbon.</p>  
+      <div class="card-footer">  
+        <span class="price-tag">Price on Request</span>  
+        <button class="btn-whatsapp-card" onclick="orderOnWhatsApp('Blush & Black Eternal Rose Box')">  
+          💬 Order on WhatsApp  
+        </button>  
+      </div>  
+    </div>  
+  </article>  
 
-  bouquets.forEach((bouquet, index) => {
-    const [name, category, price, searchTerm] = bouquet;
+  <!-- Card 7 -->  
+  <article class="bouquet-card">  
+    <div class="card-image-wrapper">  
+      <img src="images/bouquet-07.jpg"   
+           alt="Grand Regal Crimson & Ivory Bouquet"   
+           loading="lazy"   
+           onerror="this.style.display='none';">  
+    </div>  
+    <div class="card-body">  
+      <h2 class="card-title">Grand Regal Crimson & Ivory Bouquet</h2>  
+      <p class="card-description">An extravagant bouquet combining rich crimson, baby pink, and white satin roses highlighted with baby's breath accents.</p>  
+      <div class="card-footer">  
+        <span class="price-tag">Price on Request</span>  
+        <button class="btn-whatsapp-card" onclick="orderOnWhatsApp('Grand Regal Crimson & Ivory Bouquet')">  
+          💬 Order on WhatsApp  
+        </button>  
+      </div>  
+    </div>  
+  </article>  
 
-    const card = document.createElement("article");
-    card.className = "gallery-card";
-    card.dataset.category = category;
+  <!-- Card 8 -->  
+  <article class="bouquet-card">  
+    <div class="card-image-wrapper">  
+      <img src="images/bouquet-08.jpg"   
+           alt="Ruby & Gold Elegance Bouquet"   
+           loading="lazy"   
+           onerror="this.style.display='none';">  
+    </div>  
+    <div class="card-body">  
+      <h2 class="card-title">Ruby & Gold Elegance Bouquet</h2>  
+      <p class="card-description">A striking bouquet featuring deep red border roses encasing soft ivory center roses with delicate 3D butterflies.</p>  
+      <div class="card-footer">  
+        <span class="price-tag">Price on Request</span>  
+        <button class="btn-whatsapp-card" onclick="orderOnWhatsApp('Ruby & Gold Elegance Bouquet')">  
+          💬 Order on WhatsApp  
+        </button>  
+      </div>  
+    </div>  
+  </article>  
 
-    const image = document.createElement("img");
-    image.src =
-      "https://loremflickr.com/600/700/" +
-      encodeURIComponent(searchTerm) +
-      "?lock=" + (index + 1);
+</div>
 
-    image.alt = name + " inspiration photo";
-    image.loading = index < 4 ? "eager" : "lazy";
-
-    image.onerror = function () {
-      this.onerror = null;
-      this.src = "https://placehold.co/600x700/fff0f5/b83267?text=Bouquet+" + (index + 1);
-    };
-
-    const info = document.createElement("div");
-    info.className = "gallery-info";
-
-    const title = document.createElement("h3");
-    title.textContent = name;
-
-    const priceText = document.createElement("p");
-    priceText.textContent = "Starting idea: ₹" + price;
-
-    const order = document.createElement("a");
-    order.className = "btn";
-    order.textContent = "Ask on WhatsApp";
-
-    const message =
-      "Hello Ribbon Bouquet by Muskan! 🎀 I liked the " +
-      name + " design. Is a similar ribbon bouquet available? Please confirm the price and delivery.";
-
-    order.href = "https://wa.me/919864152219?text=" + encodeURIComponent(message);
-    order.target = "_blank";
-    order.rel = "noopener";
-
-    info.appendChild(title);
-    info.appendChild(priceText);
-    info.appendChild(order);
-
-    card.appendChild(image);
-    card.appendChild(info);
-
-    grid.appendChild(card);
-  });
-
-  function filterGallery(category, button) {
-    document.querySelectorAll(".filter-btn").forEach(function (btn) {
-      btn.classList.remove("active");
-    });
-
-    button.classList.add("active");
-
-    document.querySelectorAll(".gallery-card").forEach(function (card) {
-      const show = category === "all" || card.dataset.category === category;
-      card.classList.toggle("hidden-card", !show);
-    });
-  }
-</script></body>
+  </main>    <!-- Existing Main JavaScript File -->    <script src="script.js"></script>    <!-- Dynamic WhatsApp Messaging Script -->    <script>  
+    function orderOnWhatsApp(bouquetName) {  
+      const phone = "919864152219";  
+      const message = `Hello Ribbon Bouquet by Muskan! I am interested in ${bouquetName}. Please tell me the price and confirm delivery availability for my location in Assam.`;  
+      const encodedMessage = encodeURIComponent(message);  
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;  
+        
+      window.open(whatsappUrl, '_blank');  
+    }  
+  </script>  </body>  
 </html>
