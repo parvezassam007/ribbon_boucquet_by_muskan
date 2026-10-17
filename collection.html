@@ -1,115 +1,360 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Collection & Prices | Ribbon Bouquet by Muskan</title>
-  <meta name="description" content="Explore handmade ribbon rose bouquets and prices. Order your favourite bouquet across Assam.">
+
+  <meta name="description"
+        content="Explore handmade ribbon rose bouquets with and without glitter. Get an extra 5% discount when you follow us on Instagram. Delivery across Assam.">
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .price-section {
+      margin-bottom: 45px;
+    }
+
+    .price-heading {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .price-heading h2 {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .price-heading p {
+      color: #777;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 16px;
+    }
+
+    .price-card {
+      background: #fff;
+      border: 1px solid #f1dce5;
+      border-radius: 16px;
+      padding: 20px 12px;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    }
+
+    .rose {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    .price-card h3 {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    .price-card .price {
+      font-size: 23px;
+      font-weight: bold;
+      color: #d63384;
+      margin: 12px 0;
+    }
+
+    .discount-note {
+      background: #fff0f6;
+      border: 1px dashed #e75480;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .discount-note h3 {
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+
+    .discount-note p {
+      line-height: 1.7;
+    }
+
+    .follow-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 22px;
+      background: #d63384;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .note {
+      line-height: 1.8;
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    @media (max-width: 400px) {
+      .price-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
 </head>
-<body>  <header class="header">
+
+<body>
+
+  <header class="header">
     <a class="logo" href="index.html">🎀 Ribbon Bouquet</a>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <button class="menu-btn"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu">☰</button>
+
     <nav id="nav">
       <a href="index.html">Home</a>
       <a href="collection.html">Collection & Prices</a>
       <a href="about.html">About & Contact</a>
     </nav>
-  </header>  <main>
+  </header>
+
+  <main>
+
     <section class="page-banner">
       <p class="eyebrow">OUR HANDMADE COLLECTION</p>
       <h1>Choose Your Bouquet 🌹</h1>
-      <p>Beautiful flowers, made with love.</p>
-    </section><section class="section">
-  <div class="price-grid">
+      <p>Beautiful ribbon roses, handmade with love.</p>
+    </section>
 
-    <article class="price-card">
-      <div class="rose">🌹</div>
-      <h3>Single Rose</h3>
-      <p>1 Ribbon Rose</p>
-      <p class="price">₹80</p>
-      <a class="btn order-btn" href="#" data-product="1 Rose Bouquet - ₹80">Order Now</a>
-    </article>
+    <section class="section">
 
-    <article class="price-card">
-      <div class="rose">💐</div>
-      <h3>Double Rose</h3>
-      <p>2 Ribbon Roses</p>
-      <p class="price">₹150</p>
-      <a class="btn order-btn" href="#" data-product="2 Rose Bouquet - ₹150">Order Now</a>
-    </article>
+      <!-- WITHOUT GLITTER -->
+      <div class="price-section">
 
-    <article class="price-card">
-      <div class="rose">🌹</div>
-      <h3>Triple Rose</h3>
-      <p>3 Ribbon Roses</p>
-      <p class="price">₹200</p>
-      <a class="btn order-btn" href="#" data-product="3 Rose Bouquet - ₹200">Order Now</a>
-    </article>
+        <div class="price-heading">
+          <h2>🌹 Without Glitter</h2>
+          <p>Simple, elegant ribbon rose bouquets.</p>
+        </div>
 
-    <article class="price-card">
-      <div class="rose">💐</div>
-      <h3>Sweet Bouquet</h3>
-      <p>4 Ribbon Roses</p>
-      <p class="price">₹220</p>
-      <a class="btn order-btn" href="#" data-product="4 Rose Bouquet - ₹220">Order Now</a>
-    </article>
+        <div class="price-grid">
 
-    <article class="price-card">
-      <div class="rose">🌹</div>
-      <h3>Love Bouquet</h3>
-      <p>5 Ribbon Roses</p>
-      <p class="price">₹250</p>
-      <a class="btn order-btn" href="#" data-product="5 Rose Bouquet - ₹250">Order Now</a>
-    </article>
+          <article class="price-card">
+            <div class="rose">🌹</div>
+            <h3>1 Rose</h3>
+            <p>Single Rose</p>
+            <p class="price">₹100/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="Without Glitter - 1 Rose - ₹100">Order Now</a>
+          </article>
 
-    <article class="price-card">
-      <div class="rose">💐</div>
-      <h3>Special Bouquet</h3>
-      <p>6 Ribbon Roses</p>
-      <p class="price">₹280</p>
-      <a class="btn order-btn" href="#" data-product="6 Rose Bouquet - ₹280">Order Now</a>
-    </article>
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>3 Roses</h3>
+            <p>Triple Rose</p>
+            <p class="price">₹250/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="Without Glitter - 3 Roses - ₹250">Order Now</a>
+          </article>
 
-    <article class="price-card">
-      <div class="rose">🌹</div>
-      <h3>Beautiful Bouquet</h3>
-      <p>7 Ribbon Roses</p>
-      <p class="price">₹300</p>
-      <a class="btn order-btn" href="#" data-product="7 Rose Bouquet - ₹300">Order Now</a>
-    </article>
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>6 Roses</h3>
+            <p>Special Bouquet</p>
+            <p class="price">₹550/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="Without Glitter - 6 Roses - ₹550">Order Now</a>
+          </article>
 
-    <article class="price-card">
-      <div class="rose">💐</div>
-      <h3>Grand Bouquet</h3>
-      <p>15 Ribbon Roses</p>
-      <p class="price">₹500</p>
-      <a class="btn order-btn" href="#" data-product="15 Rose Bouquet - ₹500">Order Now</a>
-    </article>
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>7 Roses</h3>
+            <p>Beautiful Bouquet</p>
+            <p class="price">₹650/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="Without Glitter - 7 Roses - ₹650">Order Now</a>
+          </article>
 
-    <article class="price-card">
-      <div class="rose">💝</div>
-      <h3>Luxury Bouquet</h3>
-      <p>20 Ribbon Roses</p>
-      <p class="price">₹650</p>
-      <a class="btn order-btn" href="#" data-product="20 Rose Bouquet - ₹650">Order Now</a>
-    </article>
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>10 Roses</h3>
+            <p>Premium Bouquet</p>
+            <p class="price">₹900/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="Without Glitter - 10 Roses - ₹900">Order Now</a>
+          </article>
 
-  </div>
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>15 Roses</h3>
+            <p>Grand Bouquet</p>
+            <p class="price">₹1,400/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="Without Glitter - 15 Roses - ₹1400">Order Now</a>
+          </article>
 
-  <p class="note">
-    🎀 Every bouquet is handmade with love. Contact us to confirm colour options,
-    delivery availability and delivery charges across Assam.
-  </p>
+          <article class="price-card">
+            <div class="rose">💝</div>
+            <h3>20 Roses</h3>
+            <p>Luxury Bouquet</p>
+            <p class="price">₹1,950/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="Without Glitter - 20 Roses - ₹1950">Order Now</a>
+          </article>
 
-  <div class="contact-buttons">
-    <a class="btn" href="https://wa.me/919864152219" target="_blank" rel="noopener">WhatsApp Us</a>
-    <a class="btn btn-light" href="https://www.instagram.com/b_o_u_q_u_e_t_0/" target="_blank" rel="noopener">Follow on Instagram</a>
-  </div>
-</section>
+        </div>
+      </div>
 
-  </main>  <footer>
+      <!-- WITH GLITTER -->
+      <div class="price-section">
+
+        <div class="price-heading">
+          <h2>✨ With Glitter</h2>
+          <p>Extra sparkle for your special moments.</p>
+        </div>
+
+        <div class="price-grid">
+
+          <article class="price-card">
+            <div class="rose">🌹</div>
+            <h3>1 Rose</h3>
+            <p>Glitter Rose</p>
+            <p class="price">₹120/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="With Glitter - 1 Rose - ₹120">Order Now</a>
+          </article>
+
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>3 Roses</h3>
+            <p>Glitter Bouquet</p>
+            <p class="price">₹270/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="With Glitter - 3 Roses - ₹270">Order Now</a>
+          </article>
+
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>6 Roses</h3>
+            <p>Glitter Bouquet</p>
+            <p class="price">₹570/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="With Glitter - 6 Roses - ₹570">Order Now</a>
+          </article>
+
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>7 Roses</h3>
+            <p>Glitter Bouquet</p>
+            <p class="price">₹670/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="With Glitter - 7 Roses - ₹670">Order Now</a>
+          </article>
+
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>10 Roses</h3>
+            <p>Premium Glitter Bouquet</p>
+            <p class="price">₹920/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="With Glitter - 10 Roses - ₹920">Order Now</a>
+          </article>
+
+          <article class="price-card">
+            <div class="rose">💐</div>
+            <h3>15 Roses</h3>
+            <p>Grand Glitter Bouquet</p>
+            <p class="price">₹1,420/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="With Glitter - 15 Roses - ₹1420">Order Now</a>
+          </article>
+
+          <article class="price-card">
+            <div class="rose">💝</div>
+            <h3>20 Roses</h3>
+            <p>Luxury Glitter Bouquet</p>
+            <p class="price">₹1,970/-</p>
+            <a class="btn order-btn" href="#"
+               data-product="With Glitter - 20 Roses - ₹1970">Order Now</a>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- INSTAGRAM DISCOUNT -->
+      <div class="discount-note">
+        <h3>🎁 Extra 5% OFF!</h3>
+
+        <p>
+          Follow us on Instagram and get an extra
+          <strong>5% discount</strong> on your bouquet order!
+        </p>
+
+        <a class="follow-btn"
+           href="https://www.instagram.com/b_o_u_q_u_e_t_0/"
+           target="_blank"
+           rel="noopener">
+          📸 Follow on Instagram
+        </a>
+
+        <p>
+          <small>
+            Follow us before ordering. Please confirm your discount
+            with us on WhatsApp.
+          </small>
+        </p>
+      </div>
+
+      <p class="note">
+        🎀 Every bouquet is handmade with love.<br>
+        Choose your favourite rose count and glitter style.<br>
+        Contact us to confirm colour options, delivery availability
+        and delivery charges across Assam.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a class="btn"
+           href="https://wa.me/919864152219"
+           target="_blank"
+           rel="noopener">
+          Order on WhatsApp
+        </a>
+
+        <a class="btn btn-light"
+           href="https://www.instagram.com/b_o_u_q_u_e_t_0/"
+           target="_blank"
+           rel="noopener">
+          Follow on Instagram
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
     <p>🎀 Ribbon Bouquet by Muskan</p>
     <p>Small Details, Big Emotions</p>
-    <a href="https://www.instagram.com/b_o_u_q_u_e_t_0/" target="_blank" rel="noopener">@b_o_u_q_u_e_t_0</a>
-  </footer>  <script src="script.js"></script></body>
+
+    <a href="https://www.instagram.com/b_o_u_q_u_e_t_0/"
+       target="_blank"
+       rel="noopener">
+      @b_o_u_q_u_e_t_0
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
 </html>
